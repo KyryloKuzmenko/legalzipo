@@ -10,41 +10,92 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
+  position: relative;
+  background: #0e0316;
+  height: 63px;
+  @include media(desktop) {
+    height: 115px;
+  }
 }
 
 .header-logo {
   width: 30px;
   height: 31px;
+  @include media(desktop) {
+    width: 69px;
+    height: 71px;
+  }
 }
 
 .burger-btn {
   width: 28px;
   height: 18px;
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.burger-menu-close {
+  display: none;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 20px;
+  right: 32px;
 }
 
 .header-list {
   display: none;
   @include media(desktop) {
     display: flex;
+    gap: 75px;
   }
 }
 
 .backdrop {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  margin: 0 auto;
+  right: clamp(0px, calc((100vw - 375px) / 2), 9999px);
+  width: 288px;
+  height: 100vh;
+  background: #0e0316;
   z-index: 1001;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, opacity 0.2s, visibility 0.9s;
   opacity: 0;
   visibility: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .backdrop.show {
-  visibility: visible;
+  transform: scaleX(1);
   opacity: 1;
+  visibility: visible;
+}
+
+.backdrop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 54px;
+}
+
+.backdrop-link {
+  font-weight: 500;
+  font-size: 14px;
+  color: #f0f1f1;
+}
+
+.extra-margin {
+  margin-top: 16px;
+}
+
+.header-link {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #f0f1f1;
 }

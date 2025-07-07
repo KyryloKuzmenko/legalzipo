@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const openMenuBtn = document.querySelector('.burger-menu');
+  const openMenuBtn = document.querySelector('.burger-btn');
   const closeMenuBtn = document.querySelector('.burger-menu-close');
   const backdrop = document.querySelector('.backdrop');
   const links = document.querySelectorAll('.backdrop-list-item');

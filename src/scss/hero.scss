@@ -1,0 +1,136 @@
+.hero-section {
+  padding-top: 63px;
+  @include media(desktop) {
+    padding-top: 115px;
+  }
+}
+
+.hero-content-wrap {
+  display: flex;
+  flex-direction: column;
+  background: #0e0316;
+  padding-bottom: 60px;
+  @include media(desktop) {
+    width: 100%;
+  }
+}
+
+.hero-content {
+  position: relative;
+  height: 442px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  left: -32px;
+  width: calc(100% + 64px);
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/mobile/hero-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(80%) brightness(90%);
+    opacity: 0.9;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @include media(desktop) {
+    left: -80px;
+    width: calc(100% + 160px);
+    height: 100%;
+    padding-top: 114px;
+    padding-bottom: 193px;
+    &::before {
+      background-image: url('../img/desktop/hero-desktop.png');
+    }
+  }
+}
+
+.hero-content-wrap .hero-main {
+  z-index: 2;
+  @include media(desktop) {
+    width: 100%;
+    padding-left: 190px;
+  }
+}
+
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+
+  color: #f0f1f1;
+  -webkit-text-stroke: 1px #d9c10f;
+  @include media(desktop) {
+    font-size: 48px;
+  }
+}
+
+.hero-span {
+  color: #d9c10f;
+  margin-top: 4px;
+  @include media(desktop) {
+    margin-top: 20px;
+  }
+}
+
+.hero-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(217, 193, 15, 0.7);
+  margin-top: 20px;
+  margin-bottom: 32px;
+  @include media(desktop) {
+    font-size: 20px;
+    width: 519px;
+    margin-top: 60px;
+  }
+}
+
+.hero-book {
+  margin-top: 40px;
+  border: 0.76px solid #0e0316;
+  border-radius: 30px;
+  padding: 10px 0px;
+  height: 56px;
+  background: #d9c10f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: #0e0316;
+  width: 100%;
+  max-width: 311px;
+  margin-left: auto;
+  margin-right: auto;
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.hero-book-desktop {
+  display: none;
+  @include media(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 28px;
+    color: #0e0316;
+    width: 100%;
+    max-width: 410px;
+    border: 1px solid #0e0316;
+    border-radius: 40px;
+    padding: 14px 0px;
+    max-width: 410px;
+    height: 91px;
+    background: #d9c10f;
+    margin-top: 120px;
+  }
+}

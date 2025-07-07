@@ -16,13 +16,13 @@
 .container {
   max-width: 375px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
 
   @include media(desktop) {
     max-width: 1440px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
@@ -33,14 +33,44 @@ h2 {
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  background-color: #1e1e1e;
 }
 
 h2 {
   font-family: 'Orbitron', sans-serif;
   font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  color: #d9c10f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include media(desktop) {
+    font-size: 36px;
+    gap: 20px;
+  }
+}
+
+.title-line {
+  width: 24px;
+  height: 1px;
+  background: #d9c10f;
+  @include media(desktop) {
+    width: 85px;
+  }
 }
 
 main {
   background-image: url('../img/mobile/main-bg-mobile.png');
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 505px;
+  height: 7000px;
+  max-width: 375px;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    max-width: 1440px;
+    background-image: url('../img/desktop/main-desktop-mobile.png');
+  }
 }
