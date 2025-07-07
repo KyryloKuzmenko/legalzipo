@@ -1,0 +1,79 @@
+.tools-content-wrap {
+  padding-bottom: 60px;
+  @include media(desktop) {
+    padding-bottom: 160px;
+  }
+}
+
+.tools-content {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 0;
+  height: 368px;
+  margin-top: 40px;
+  left: -32px;
+  width: calc(100% + 64px);
+  @include media(desktop) {
+    background-image: url('../img/desktop/tools-desktop-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: -80px;
+    width: calc(100% + 160px);
+    padding-top: 100px;
+    padding-bottom: 70px;
+    height: 100%;
+    min-height: 695px;
+  }
+}
+
+.tools-subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #d9c10f;
+  @include media(desktop) {
+    font-size: 38px;
+    text-align: left;
+    margin-left: 80px;
+  }
+}
+
+.tools-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.23352;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #f0f1f1;
+  margin-top: 40px;
+  @include media(desktop) {
+    font-size: 48px;
+    width: 100%;
+    max-width: 1012px;
+    margin-left: 172px;
+    margin-top: 100px;
+  }
+}
+
+.tools-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/mobile/tools-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  @include media(desktop) {
+    background: none;
+  }
+}
+
+.tools-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}

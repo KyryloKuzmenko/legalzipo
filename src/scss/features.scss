@@ -1,0 +1,123 @@
+.features-content-wrap {
+  padding-bottom: 60px;
+  @include media(desktop) {
+    padding-bottom: 160px;
+  }
+}
+
+.features-subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  color: #d9c10f;
+  margin-top: 40px;
+  @include media(desktop) {
+    font-size: 38px;
+    margin-top: 80px;
+  }
+}
+
+.features-text {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.23352;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #f0f1f1;
+  @include media(desktop) {
+    font-size: 48px;
+    width: 100%;
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+}
+
+.features-list-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #d9c10f;
+  margin-top: 40px;
+  @include media(desktop) {
+    font-size: 38px;
+    margin-top: 100px;
+  }
+}
+
+.features-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  @include media(desktop) {
+    margin-top: 80px;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+}
+
+.features-list-item {
+  border-radius: 10px;
+  padding: 9px 9px 39px 9px;
+  width: 148px;
+  height: 163px;
+  box-shadow: -0.5px 0.5px 1.5px 0.5px rgba(217, 193, 15, 0.66);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @include media(desktop) {
+    border-radius: 20px;
+    padding: 20px 20px 80px 20px;
+    width: 302px;
+    height: 333px;
+  }
+}
+
+.features-list-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+
+  padding: 4px 7px;
+  width: 23px;
+  height: 24px;
+  border: 1px solid #d9c10f;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 10px;
+  color: #d9c10f;
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  @include media(desktop) {
+    padding: 10px 16px;
+    width: 47px;
+    height: 48px;
+    font-size: 21px;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.features-list-text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+  color: #f0f1f1;
+  width: 128px;
+  height: 54px;
+  margin-top: 70px;
+  @include media(desktop) {
+    font-size: 24px;
+    width: 262px;
+    height: 108px;
+    margin-top: 148px;
+  }
+}
