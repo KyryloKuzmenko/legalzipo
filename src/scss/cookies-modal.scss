@@ -1,0 +1,105 @@
+.cookie-modal .cookies-wrap {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  background: #0e0316;
+  width: 375px;
+  height: 334px;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include media(desktop) {
+    width: 100%;
+    max-width: 1280px;
+    height: 500px;
+    bottom: 80px;
+  }
+}
+
+.cookies-wrap .cookies-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 0.15em;
+  color: #f1f5f9;
+  @include media(desktop) {
+    font-size: 48px;
+    margin-right: auto;
+  }
+}
+
+.cookies-modal-text {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #f1f5f9;
+  margin-top: 28px;
+  @include media(desktop) {
+    font-size: 32px;
+    margin-top: 62px;
+  }
+}
+
+.cookies-btn-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 50px;
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 36px;
+    margin-top: 100px;
+  }
+}
+
+.cookies-accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 13px 28px;
+  width: 148px;
+  height: 50px;
+  background: #d9c10f;
+
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+  @include media(desktop) {
+    font-size: 24px;
+    padding: 13px 28px;
+    width: 519px;
+    height: 60px;
+  }
+}
+
+.cookies-decline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 13px 28px;
+  width: 147px;
+  height: 50px;
+  background: #d9c10f;
+
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+  @include media(desktop) {
+    font-size: 24px;
+    padding: 13px 28px;
+    width: 519px;
+    height: 60px;
+  }
+}
